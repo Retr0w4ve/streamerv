@@ -1,0 +1,13 @@
+{
+    "host": "localhost",
+    "port": 8000,
+    "mountpoint": "/stream",
+    "content-type": "audio/mpeg",
+    "headers": {
+      "icy-name": "My Stream",
+      "icy-description": "A description of my stream",
+      "icy-genre": "Electronic",
+      "icy-url": "http://94.198.220.232:8000/"
+    },
+    "input-file": "never_gonna_give_you_up.mp3"
+  }
