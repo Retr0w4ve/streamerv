@@ -1,27 +1,10 @@
-version: "2.2"
+version: "3.3"
 
 services:
   icecast:
     image: deepcomp/icecast2
     ports:
       - "8000:8000"
-      - "8001:8001"
     volumes:
       - ./icecast.xml:/usr/local/etc/icecast.xml
-    restart: always
-streamer:
-    build: .
-    ports:
-      - "8002:8002"
-    environment:
-      ICECAST_HOST: icecast
-      ICECAST_PORT: 8000
-      ICECAST_MOUNTPOINT: /stream
-      ICECAST_CONTENT_TYPE: audio/mpeg
-      ICECAST_NAME: My Stream
-      ICECAST_DESCRIPTION: A description of my stream
-      ICECAST_GENRE: Electronic
-      ICECAST_URL: http://example.com
-    volumes:
-      - ./settings.json:/app/settings.json
     restart: always
