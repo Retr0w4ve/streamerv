@@ -1,5 +1,5 @@
 const fs = require('fs');
-const lame = require('lame');
+const lame = require('node-lame');
 const icy = require('icy');
 const { PassThrough } = require('stream');
 
